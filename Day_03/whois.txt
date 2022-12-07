@@ -1,0 +1,84 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+refer:        whois.nic.shop
+
+domain:       SHOP
+
+organisation: GMO Registry, Inc.
+address:      26-1 Sakuragaokacho Shibuya-ku, Tokyo
+address:      Japan
+
+contact:      administrative
+name:         Representative Director and CEO
+organisation: GMO Registry, Inc.
+address:      Cerulean Tower, 26-1 Sakuragaoka-cho, Shibuya-ku, Tokyo
+address:      Japan
+phone:        +81354561601
+fax-no:       +81337805239
+e-mail:       newgtld@gmoregistry.com
+
+contact:      technical
+name:         Director
+organisation: GMO Registry, Inc.
+address:      Cerulean Tower 26-1 Sakuragaoka-cho, Shibuya-ku, Tokyo
+address:      Japan
+phone:        +81354561601
+fax-no:       +81337805239
+e-mail:       newgtld@gmoregistry.com
+
+nserver:      A.GMOREGISTRY.NET 2001:dcd:1:0:0:0:0:4 37.209.192.4
+nserver:      B.GMOREGISTRY.NET 2001:dcd:2:0:0:0:0:4 37.209.194.4
+nserver:      K.GMOREGISTRY.NET 37.209.196.4
+nserver:      L.GMOREGISTRY.NET 2001:dcd:4:0:0:0:0:4 37.209.198.4
+ds-rdata:     50701 8 2 30f44f9e79f1119aebed349d3ec34f7aedd83a58f1e706d8303c3bbfe83bc7ec
+
+whois:        whois.nic.shop
+
+status:       ACTIVE
+remarks:      Registration information: http://www.gmoregistry.com/en/
+
+created:      2016-05-05
+changed:      2019-07-13
+source:       IANA
+
+Domain Name: SANTAGIFT.SHOP
+Registry Domain ID: DO7311971-GMO
+Registrar WHOIS Server: whois.namecheap.com
+Registrar URL: https://www.namecheap.com/
+Updated Date: 2022-11-15T10:36:28.0Z
+Creation Date: 2022-10-30T14:48:03.0Z
+Registry Expiry Date: 2024-10-30T23:59:59.0Z
+Registrar: Namecheap, Inc.
+Registrar IANA ID: 1068
+Registrar Abuse Contact Email: abuse@namecheap.com
+Registrar Abuse Contact Phone: +1.6613102107
+Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+Registrant State/Province: Capital Region
+Registrant Country: IS
+Registrant Email:
+Admin Email:
+Tech Email:
+Name Server: NS-298.AWSDNS-37.COM
+Name Server: NS-815.AWSDNS-37.NET
+Name Server: NS-1224.AWSDNS-25.ORG
+Name Server: NS-1782.AWSDNS-30.CO.UK
+DNSSEC: unsigned
+URL of the ICANN Whois Inaccuracy Complaint Form: https://www.icann.org/wicf/
+>>> Last update of WHOIS database: 2022-12-05T19:12:16.0Z <<<
+
+For more information on Whois status codes, please visit https://icann.org/epp
+
+Please query the RDDS service of the Registrar of Record identified in this output for information on how to contact the Registrant, Admin, or Tech contact of the queried domain name.
+
+This whois service is provided by GMO Registry and only contains
+information pertaining to Internet domain names we have registered for
+our customers. By using this service you are agreeing (1) not to use any
+information presented here for any purpose other than determining
+ownership of domain names, (2) not to store or reproduce this data in
+any way, (3) not to use any high-volume, automated, electronic processes
+to obtain data from this service. Abuse of this service is monitored and
+actions in contravention of these terms will result in being permanently
+blacklisted. All data is (c) GMO Registry http://www.gmo-registry.com/en/
+
