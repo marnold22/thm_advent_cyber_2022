@@ -7,6 +7,15 @@ Description: Elf McBlue found an email activity while analysing the log files. I
 
 > IP = 10.10.186.242
 
+## LEARNING OBJECTIVES
+
++ Learn what email analysis is and why it still matters.
++ Learn the email header sections.
++ Learn the essential questions to ask in email analysis.
++ Learn how to use email header sections to evaluate an email.
++ Learn to use additional tools to discover email attachments and conduct further analysis.
++ Help the Elf team investigate the suspicious email received.
+
 ## NOTES
 
 1. What is email analysis?

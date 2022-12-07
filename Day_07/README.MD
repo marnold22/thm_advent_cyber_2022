@@ -7,6 +7,13 @@ Description: In the previous task, we learned that McSkidy was indeed a victim o
 
 > IP = 10.10.99.181
 
+## LEARNING OBJECTIVES
+
++ What is CyberChef
++ What are the capabilities of CyberChef
++ How to leverage CyberChef to analyze a malicious document
++ How to deobfuscate, filter and parse the data
+
 ## NOTES
 
 1. Cyberchef

@@ -5,6 +5,15 @@
 
 Description: As the elves are trying to recover the compromised santagift.shop website, elf Recon McRed is trying to figure out how it was compromised in the first place. Can you help him in gathering open-source information against the website?
 
+## LEARNING OBJECTIVES
+
++ What is OSINT, and what techniques can extract useful information against a website or target?
++ Using dorks to find specific information on the Google search engine
++ Extracting hidden directories through the Robots.txt file
++ Domain owner information through WHOIS lookup
++ Searching data from hacked databases
++ Acquiring sensitive information from publicly available GitHub repositories
+
 ## NOTES
 
 What is OSINT?

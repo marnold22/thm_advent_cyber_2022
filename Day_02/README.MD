@@ -14,6 +14,14 @@ Username: `elfmcblue`
 Password: `tryhackme!`
 Use the knowledge you have gained in today's task to help Elf McBlue track down the Bandit Yeti APT by answering the questions below.
 
+## LEARNING OBJECTIVES
+
++ Learn what log files are and why they’re useful
++ Understand what valuable information log files can contain
++ Understand some common locations these logs file can be found
++ Use some basic Linux commands to start analysing log files for valuable information
++ Help Elf McBlue track down the Bandit Yeti APT!
+
 ## NOTES
 
 ## LAUNCH THE INSTANCE

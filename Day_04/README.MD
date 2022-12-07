@@ -9,6 +9,13 @@ Let's connect to the Samba service using the credentials we found through the so
 Username: `ubuntu`
 Password: `S@nta2022`
 
+## LEARNING OBJECTIVES
+
++ What is Scanning?
++ Scanning types
++ Scanning techniques
++ Scanning tools
+
 ## NOTES
 
 Scanning Techniques
@@ -16,7 +23,7 @@ Scanning Techniques
 1. Network Scanning
    + A network is usually a collection of interconnected hosts or computers to share information and resources. Network scanning helps to discover and map a complete network, including any live computer or hosts, open ports, IP addresses, and services running on any live host and operating system. Once the network is mapped, an attacker executes exploits as per the target system and services discovered. For example, a computer in a network with an outdated Apache version enables an attacker to launch an exploit against a vulnerable Apache server.
 2. Port Scanning
-   + Per Wikipedia, "In computer networking, a port is a number assigned to uniquely identify a connection endpoint and to direct data to a specific service. At the software level, within an operating system, a port is a logical construct that identifies a specific process or a type of network service". 
+   + Per Wikipedia, "In computer networking, a port is a number assigned to uniquely identify a connection endpoint and to direct data to a specific service. At the software level, within an operating system, a port is a logical construct that identifies a specific process or a type of network service".
    + Port scanning is a conventional method to examine open ports in a network capable of receiving and sending data. First, an attacker maps a complete network with installed devices/ hosts like firewalls, routers, servers etc., then scans open ports on each live host. Port number varies between 0 to 65,536 based on the type of service running on the host. Port scanning results fall into the following three categories:
      + Closed Ports: The host is not listening to the specific port.
      + Open Ports: The host actively accepts a connection on the specific port.
