@@ -1,0 +1,9 @@
+# Nmap 7.93 scan initiated Fri Dec  9 16:28:35 2022 as: nmap -T4 -A -Pn -oN initial 10.10.103.146
+Nmap scan report for 10.10.103.146
+Host is up (0.17s latency).
+Not shown: 999 closed tcp ports (conn-refused)
+PORT   STATE SERVICE VERSION
+80/tcp open  http    Apache httpd 2.4.54 ((Debian))
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Dec  9 16:30:16 2022 -- 1 IP address (1 host up) scanned in 101.19 seconds
