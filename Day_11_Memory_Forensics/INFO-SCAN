@@ -1,0 +1,24 @@
+Volatility 3 Framework 2.4.1
+
+Variable	Value
+
+Kernel Base	0xf803218a8000
+DTB	0x1ad000
+Symbols	file:///home/elfmcblue/volatility3/volatility3/symbols/windows/ntkrnlmp.pdb/E0093F3AEF15D58168B753C9488A4043-1.json.xz
+Is64Bit	True
+IsPAE	False
+layer_name	0 WindowsIntel32e
+memory_layer	1 FileLayer
+KdVersionBlock	0xf80321cd23c8
+Major/Minor	15.18362
+MachineType	34404
+KeNumberProcessors	4
+SystemTime	2022-11-23 10:15:56
+NtSystemRoot	C:\Windows
+NtProductType	NtProductWinNt
+NtMajorVersion	10
+NtMinorVersion	0
+PE MajorOperatingSystemVersion	10
+PE MinorOperatingSystemVersion	0
+PE Machine	34404
+PE TimeDateStamp	Mon Apr 14 21:36:50 2104
