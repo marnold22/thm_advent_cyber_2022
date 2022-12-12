@@ -1,11 +1,11 @@
 # Day_10 [Hack-a-game] You're a mean one, Mr. Yeti
 
-+ Deployable Website: No
++ Deployable Website: Yes
 + Deployable Container: Yes
 
 Description: Santa's team have done well so far. The elves, blue and red combined, have been securing everything technological all around. The Bandit Yeti, unable to hack a thing, decided to go for eldritch magic as a last resort and trapped Elf McSkidy in a video game during her sleep. When the rest of the elves woke up, their leader was nowhere to be found until Elf Recon McRed noticed one of their screens, where Elf McSkidy's pixelated figure could be seen. By the screen, an icy note read: "Only by winning the unwinnable game shall your dear Elf McSkidy be reclaimed". Without their chief, the elves started running in despair. How could they run a SOC without its head? The game was rigged, and try after try, the elves would lose, no matter what. As struck by lightning, Elf Exploit McRed stood up from his chair and said to the others: "If we can't win it, we'll hack it!".
 
-> IP
+> IP = 10.10.107.241
 
 ## LEARNING OBJECTIVES
 
