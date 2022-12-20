@@ -1,0 +1,16 @@
+
+Scan Time:     2022-12-20 11:50:06
+Target File:   /home/marnold/CTF/thm_advent_cyber_2022/Day_20_Firmware/firmwarev1.0-unsigned
+MD5 Checksum:  b141dc2678be3a20d4214b93354fedc0
+Signatures:    344
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             TP-Link firmware header, firmware version: 0.-15360.3, image version: "", product ID: 0x0, product version: 138412034, kernel load address: 0x0, kernel entry point: 0x80002000, kernel offset: 4063744, kernel length: 512, rootfs offset: 849104, rootfs length: 1048576, bootloader offset: 2883584, bootloader length: 0
+13344         0x3420          U-Boot version string, "U-Boot 1.1.4 (Apr  6 2016 - 11:12:23)"
+13392         0x3450          CRC32 polynomial table, big endian
+14704         0x3970          uImage header, header size: 64 bytes, header CRC: 0x5A946B00, created: 2016-04-06 03:12:24, image size: 35920 bytes, Data Address: 0x80010000, Entry Point: 0x80010000, data CRC: 0x510235FE, OS: Linux, CPU: MIPS, image type: Firmware Image, compression type: lzma, image name: "u-boot image"
+14768         0x39B0          LZMA compressed data, properties: 0x5D, dictionary size: 33554432 bytes, uncompressed size: 93944 bytes
+131584        0x20200         TP-Link firmware header, firmware version: 0.0.3, image version: "", product ID: 0x0, product version: 138412034, kernel load address: 0x0, kernel entry point: 0x80002000, kernel offset: 3932160, kernel length: 512, rootfs offset: 849104, rootfs length: 1048576, bootloader offset: 2883584, bootloader length: 0
+132096        0x20400         LZMA compressed data, properties: 0x5D, dictionary size: 33554432 bytes, uncompressed size: 2494744 bytes
+1180160       0x120200        Squashfs filesystem, little endian, version 4.0, compression:lzma, size: 2812026 bytes, 600 inodes, blocksize: 131072 bytes, created: 2022-11-17 11:14:32
+
