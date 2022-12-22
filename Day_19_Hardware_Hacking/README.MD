@@ -5,7 +5,7 @@
 
 Description: Elf McSkidy was doing a regular sweep of Santa's workshop when he discovered a hardware implant! The implant has a web camera attached to a microprocessor and another chip. It seems like someone was planning something malicious... We must try to understand what this implant was trying to do! We will deal with the microprocessor and the web camera in future tasks; for now, let's try to uncover what that other chip is being used for. The elves realise that these chips probably use digital communication that can be intercepted with a Logic Analyser. Looking at the wires between the chips, we see a black wire connected to a pin called GND and a red wire connected to a pin called VIN. Elf Forensic knows from experience that this would be the Ground and Voltage IN wires, respectively, meaning these wires are used to provide power to the chip. That then leaves the green and purple wires that would be used for data transmission. Seeing that they are connected to the RX0 and TX0 pins, Elf Recon can deduce that this refers to the Transmit and Receive lines of USART communication. Hence we are pretty sure that the protocol used for communication is USART. Armed with this information, the elves connect the probes of the Logic Analyser to the green and purple wires before powering on the implant. Immediately, super-fast signals are seen on the analyser! The elves create a logic data dump from the signals, and McSkidy is asking you to investigate what is actually being transmitted!
 
-> IP:
+> IP: 10.10.108.204
 
 ## LEARNING OBJECTIVES
 
@@ -67,6 +67,39 @@ Description: Elf McSkidy was doing a regular sweep of Santa's workshop when he d
 12. Once added, click the Trash icon in the bottom right to remove all terminal data. Once done, click on the three dots next to each analyser and select Restart on both of them.
 13. Now we are starting to piece together the information! It seems like the microprocessor is establishing a session with the ESP32 device to allow communication to the control server! We can now see the full discussion between the two devices. The processor asks the ESP32 to reboot its connection to the control server. The ESP32 is happy to oblige but requests a security code to be sent to allow connection to the control server. Once the security code has been transmitted, the ESP32 allows the microprocessor to negotiate a new baud rate to be used for communication. Interestingly, once this new baud rate is accepted, we cannot read the rest of the output! However, since we intercepted the baud rate, we can simply edit our Channel 0 analyser to a new baud rate to read the rest of the communication that was sent. Go make this change to get your flag!
 
+## LOGIC-2 STEPS
+
+1. Open santa capture
+2. Click the 'Analyzers' Tab
+3. Click 'Async Serial' Analyzer
+   1. Adjust Settings:
+      1. Input Channel: `Channel 1`
+      2. Bit Rate: `4800`
+   2. Click the terminal icon
+      1. We get the response:
+         1. `\xF7\xFE\xFE\xE0n\xFF\xFE\0ACK REBOOT CMDX195837 9600`
+4. Add another 'Async Serial' Analyzer (for other half of message)
+   1. Adjust Settings:
+      1. Input Channel: `Channel 0`
+      2. Bit Rate: `4800`
+   2. Click the terminal icon
+      1. We get the response:
+         1. `Hello, command? Please send security string... Security string accepted, please specify new baud rate... New baud rate of 9600 accepted... \x83\x85\x85\x84\xA4\x84\x85\xA4\x84\xA6\x84\x86\x84\x87\xE6\x85\x87\x85\x84\xC7\xC7\x84\x85\xE4\x85\xE5\x84\xE7G\xF3@\xE2\x82\xE5\xE6\xE5\x82\x85\x85\x85G\xE5\x81\xC7c`
+      2. Now we know the new baud rate should be `9600`
+5. Go back to Channel 1
+   1. Adjust settings:
+      1. Bit Rate: 9600
+      2. RESPONSE:
+         1. `\x7F8\xFF\xF8\0\x0F\xFD\x0E\xFF\xF8\0\x06\xE6\x80\xE6\x86\x06\x18\x98f\x18\xE6\x98\xFE\x98f\x1E\x98\x80\x1Ef\x98\x06f\xE0\x98\xF8\x98\xE6\x18\x9 x~\x98\x1E\x98\x80\x86\x18\x1E\0\x18\x98\x1E\x98\x8`
+         2. Nothing too useful yet
+6. Go back to Channel 2
+   1. Adjust settings:
+      1. Bit Rate: `9600`
+      2. RESPONSE:
+         1. `\x80\x98f\x06\x9E\xE0\x9E\xFE\x9E\xE0\x86\0\x98\xE0\xE6\x9E\xE6\x9E\xE6\x9E\x06\x86\x9E\xE6\x18\x18f\x9Eff\xE6\xF8fx\0\x98\xF8fx\xF8\x9E\x06\x98\xF8fx\x1Ef~\x18f\x9Ef\x06\x98\xF8\x06~\x18f\x9E\xF8\x9E~\x86\x86\xF8\x86\xF8\x86\xE6\x80\x98\x80\x1Ef\x86\xE6\xE0f~\x18f\x9Ef\x06\x98\xF8\x06~\x18f\x9E\xF8\x9E~\x06\x98\x80\xE6\xE0\xE6\xE0fx\0\x06~f\x06x\xE0\x86\0\x18\x06\x9Eff\xE6\xF8fx\0\x98\xF8\x06fx\x1Ef\x9Exf\x06\x18\x9Ef\xE6~\0\x18\xE0ff~\x06\x18\xF8f\x06~f\x86\x86\xF8\x86\xF8\x86\xE6\x80\x98\x80\xF8\x98f\xE6~\0\x18\xE0ff~\x06\x18\xF8f\x06~f\x06\x98\x9Ex\x06\x98\xF8\x18\x1E\0\x18\x18\x98\x80\xE6\xE0\xE6\xE0fx\0\x06~f\x06x\xF8\x86\xF8\x86\xF8\x86\xE6\x80\x98\x80New baud rate acquired, sending new administrator code... THM{Hacking.Hardware.Is.Fun}`
+         2. BINGO! We now have the flag
+            1. `THM{Hacking.Hardware.Is.Fun}`
+
 ## QUESTIONS
 
 1. What device can be used to probe the signals being sent on electrical wires between two devices?
@@ -84,6 +117,6 @@ Description: Elf McSkidy was doing a regular sweep of Santa's workshop when he d
 7. What is the maximum number of devices that can be connected on a single pair of I2C lines?
    1. `1008`
 8. What is the new baud rate that is negotiated between the microprocessor and ESP32 chip?
-   1. ``
+   1. `9600`
 9. What is the flag that is transmitted once the new baud rate was accepted?
-   1. ``
+   1. `THM{Hacking.Hardware.Is.Fun}`
