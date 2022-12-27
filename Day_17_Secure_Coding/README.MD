@@ -33,6 +33,31 @@ Description: After handling unrestricted file uploads and SQLi vulnerabilities, 
       2. Square brackets can also accept a range of characters by adding a hyphen, as seen in our original example.
       3. You can also mix and match sets of characters within the bracket. [a-zA-Z] means you want to match any character from the English alphabet regardless of case, while [a-z0-9] means you want to match any lowercase alphanumeric character.
 
+   2. We also need to talk about regex operators. The simplest one is the wildcard operator, denoted by . . This means regex will match any character, and it's quite powerful when used with the operators *, +, and {min,max}. The asterisk or star operator is used if you don't care if the preceding token matches anything or not, while the plus operator is used if you want to make sure that it matches at least once. The curly braces operator, on the other hand, specifies the number of characters you want to match. Let's look at the following examples:
+      1. To match a string that is alphanumeric and case insensitive, our pattern would be [a-zA-Z0-9]+. The plus operator means that we want to match a string, and we don't care how long it is, as long as it's composed of letters and numbers regardless of their case.
+      2. If we want to ensure that the first part of the string is composed of letters and we want it to match regardless if there are numbers thereafter, it would be ^[a-zA-Z]+[0-9]*$. The ^ and $ operators are called anchors, and denote the start and end of the string we want to match, respectively. Since we wanted to ensure that the start of the string is composed of only letters, adding the caret operator is required.
+      3. If we want to match just lowercase letters that are in between 3 and 9 characters in length, our pattern would be ^[a-z]{3,9}$.
+      4. If we want a string that starts with 3 letters followed by any 3 characters, our pattern would be ^[a-zA-Z]{3}.{3}$.
+
+   3. There's also the concept of grouping and escaping, denoted by the () and the \ operators, respectively. Grouping is done to manage the matching of specific parts of the regex better while escaping is used so we can match strings that contain regex operators. Finally, there's the ? operator, which is used to denote that the preceding token is optional. Let's look at the following example:
+      1. If we want to match both www.tryhackme.com and tryhackme.com, our pattern would be ^(www\.)?tryhackme\.com$. This pattern would also avoid matching .tryhackme.com.
+      2. ^(www\.)?: The ^ operator marks the start of the string, followed by the grouping of www and the escaped ., and immediately followed by the question mark operator. The grouping allowed the question mark operator to work its magic, matching both strings with or without the www. at the beginning.
+      3. tryhackme\.com$: The $ operator marks the end of the string, preceded by the string tryhackme, an escaped ., and the string com. If we don't escape the . operator, the regex engine will think that we want to match any character between tryhackme and com as well.
+
+   4. SUMMARY / BREAKDOWN
+
+         | Character | Description                                                                              |
+         |-----------|------------------------------------------------------------------------------------------|
+         | []        | Character Set: matches any single character/range of characters inside                   |
+         | .         | Wildcard: matches any character                                                          |
+         | *         | Star / Asterisk Quantifier: matches the preceding token zero or more times               |
+         | +         | Plus Quantifier: matches the preceding token one or more times                           |
+         | {min,max} | Curly Brace Quantifier: specifies how many times the preceding token can be repeated     |
+         | ()        | Grouping: groups a specific part of the regex for better management                      |
+         | \         | Escape: escapes the regex operator so it can be matched                                  |
+         | ?         | Optional: specifies that the preceding token is optional                                 |
+         | ^         | Anchor Beginning: specifies that the consequent token is at the beginning of the string  |
+
 ## Exercise
 
 1. We have prepared a regex exercise that you can access through the machine provided. First, let's start the Virtual Machine by pressing the Start Machine button at the top of this task. The machine will start in a split-screen view. In case the VM is not visible, use the blue Show Split View button at the top-right of the page.
@@ -41,7 +66,7 @@ Description: After handling unrestricted file uploads and SQLi vulnerabilities, 
 
 + Filtering for Usernames: Alphanumeric, minimum of 6 characters, maximum of 12 characters, may consist of upper and lower case letters.
 
-+ Filtering for Emails: Follows the form "local-part@domain" (without quotation marks); local-part is a random string, and the domain is in the form of "<domain name>.tld". All top-level domains (tld) are ".com"
++ Filtering for Emails: Follows the form "local-part@domain" (without quotation marks); local-part is a random string, and the domain is in the form of "domain name.tld". All top-level domains (tld) are ".com"
 
 + Filtering for URLs: Starts with either http or https; some of the URLs have "www", and a TLD should exist.
 
@@ -52,8 +77,8 @@ Description: After handling unrestricted file uploads and SQLi vulnerabilities, 
    1. > wget <http://10.10.71.121:8000/strings>
    2. > wget <http://10.10.71.121:8000/regex_checker.py>
 3. REGEX
-   1. Usernames_1:
-   2. Usernames_2
+   1. Usernames_1: ^[a-zA-Z0-9]{6,12}$
+   2. Usernames_2:
 
 ## QUESTIONS
 
