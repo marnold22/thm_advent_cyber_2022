@@ -1,0 +1,27 @@
+Challenge #2: Software Discovery - Sysmon Logs
+
+Field	Value
+CommandLine	reg query "HKEY_LOCAL_MACHINE\Software\Microsoft\Internet Explorer" /v svcVersion
+Company	Microsoft Corporation
+CurrentDirectory	C:\Users\BANDIT~1\AppData\Local\Temp\2\
+Description	Registry Console Tool
+EventID	1
+FileVersion	10.0.17763.1 (WinBuild.160101.0800)
+Hashes	MD5=8A93ACAC33151793F8D52000071C0B06,SHA256=19316D4266D0B776D9B2A05D5903D8CBC8F0EA1520E9C2A7E6D5960B6FA4DCAF,IMPHASH=BE482BE427FE212CFEF2CDA0E61F19AC
+Image	C:\Windows\System32\reg.exe
+IntegrityLevel	Medium
+LogonGuid	{c5d2b969-fde8-6383-d0a3-050000000000}
+LogonId	0x5a3d0
+OriginalFileName	reg.exe
+ParentCommandLine	"cmd.exe" /c "reg query "HKEY_LOCAL_MACHINE\Software\Microsoft\Internet Explorer" /v svcVersion"
+ParentImage	C:\Windows\System32\cmd.exe
+ParentProcessGuid	{c5d2b969-0cd4-6384-2e01-000000001701}
+ParentProcessId	3052
+ParentUser	SIGMA_AOC2022\Bandit Yeti
+ProcessGuid	{c5d2b969-0cd4-6384-3001-000000001701}
+ProcessId	5864
+Product	Microsoft® Windows® Operating System
+RuleName	-
+TerminalSessionId	2
+User	SIGMA_AOC2022\Bandit Yeti
+UtcTime	2022-11-28 01:20:20.851

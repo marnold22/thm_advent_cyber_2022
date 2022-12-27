@@ -1,0 +1,27 @@
+Challenge #3: Scheduled Task Creation - Sysmon Logs
+
+Field	Value
+CommandLine	schtasks /create /tn "T1053_005_OnLogon" /sc onlogon /tr "cmd.exe /c calc.exe"
+Company	Microsoft Corporation
+CurrentDirectory	C:\Users\ADMINI~1\AppData\Local\Temp\2\
+Description	Task Scheduler Configuration Tool
+EventID	1
+FileVersion	10.0.17763.1613 (WinBuild.160101.0800)
+Hashes	MD5=2F6CE97FAF2D5EEA919E4393BDD416A7,SHA256=4B679CCC4E0E84A9EDDC24362EA4A86835597A90D94A1AE0EA905D7BCD9F771C,IMPHASH=0BF09EE8918142EE8D325D5955AA1CD9
+Image	C:\Windows\System32\schtasks.exe
+IntegrityLevel	High
+LogonGuid	{c5d2b969-b4f7-637f-329b-070000000000}
+LogonId	0x79b32
+OriginalFileName	schtasks.exe
+ParentCommandLine	"cmd.exe" /c "schtasks /create /tn "T1053_005_OnLogon" /sc onlogon /tr "cmd.exe /c calc.exe" & schtasks /create /tn "T1053_005_OnStartup" /sc onstart /ru system /tr "cmd.exe /c calc.exe""
+ParentImage	C:\Windows\System32\cmd.exe
+ParentProcessGuid	{c5d2b969-c287-6380-7605-000000001601}
+ParentProcessId	4552
+ParentUser	CHANGE-MY-HOSTN\Administrator
+ProcessGuid	{c5d2b969-c287-6380-7805-000000001601}
+ProcessId	3384
+Product	Microsoft® Windows® Operating System
+RuleName	-
+TerminalSessionId	2
+User	CHANGE-MY-HOSTN\Administrator
+UtcTime	2022-11-25 13:26:31.686

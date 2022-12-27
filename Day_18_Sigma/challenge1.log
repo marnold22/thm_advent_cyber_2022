@@ -1,0 +1,30 @@
+Challenge #1: Suspicious Account Creation - Sysmon Logs
+
+Field	Value
+AccountExpires	%%1794
+AllowedToDelegateTo	-
+DisplayName	%%1793
+EventID	4720
+HomeDirectory	%%1793
+HomePath	%%1793
+LogonHours	%%1797
+NewUacValue	0x15
+OldUacValue	0x0
+PasswordLastSet	%%1794
+PrimaryGroupId	513
+PrivilegeList	-
+ProfilePath	%%1793
+SamAccountName	BanditYetiMini
+ScriptPath	%%1793
+SidHistory	-
+SubjectDomainName	CHANGE-MY-HOSTN
+SubjectLogonId	0x79b32
+SubjectUserName	Administrator
+SubjectUserSid	S-1-5-21-1966530601-3185510712-10604624-500
+TargetDomainName	CHANGE-MY-HOSTN
+TargetSid	S-1-5-21-1966530601-3185510712-10604624-1008
+TargetUserName	BanditYetiMini
+UserAccountControl	%%2080 %%2082 %%2084
+UserParameters	%%1793
+UserPrincipalName	-
+UserWorkstations	%%1793
