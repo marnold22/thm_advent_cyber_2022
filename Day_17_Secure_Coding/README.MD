@@ -77,26 +77,65 @@ Description: After handling unrestricted file uploads and SQLi vulnerabilities, 
    1. > wget <http://10.10.71.121:8000/strings>
    2. > wget <http://10.10.71.121:8000/regex_checker.py>
 3. REGEX
-   1. Usernames_1: ^[a-zA-Z0-9]{6,12}$
-   2. Usernames_2:
+
+   1. Usernames: ^[a-zA-Z0-9]{6,12}$
+      1. 9z8yMc9T
+      2. 31337aq
+      3. 39C3qxP
+      4. R6fUTY2nC8
+      5. 9Qe5f4
+      6. User35
+      7. u3Y73h3
+      8. 5Xze553j
+
+   2. Emails: ^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$
+      1. br33zy@gmail.com
+      2. lewisham44@amg.com
+      3. johnny.the.sinner@yahoo.com
+      4. badyeti@gmail.com
+      5. maxximax@fedfull.com
+      6. jklabada@tryhackme.com
+      7. johnny.the.sinner@yahoo.com
+      8. hunter4k@canary.com
+      9. hussain.volt@hotmail.com
+      10. marckymarc@tryhackme.com
+      11. batteryvoltas@alfa.com
+
+   3. URLs: https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()!@:%_\+.~#?&\/\/=]*)
+      1. <http://www.sample.net/blood?ghost=force>
+      2. <http://keebler.com/dicta-tempore-id-dolores-blanditiis-ut.html>
+      3. <http://koch.com/quae-perspiciatis-non-unde-quo>
+      4. <http://johns.net/nisi-quis-dolorum-et-rerum>
+      5. <https://www.sample.edu/#fire>
+      6. <http://www.sample.info/?mint=trouble&action=move>
+      7. <https://www.sample.org/?quiet=expansion&grip=eggnog>
+      8. <http://spencer.com/sapiente-tempore-omnis-a-est-aut-atque-pariatur>
+      9. <http://pfeffer.biz/nulla-non-facilis-incidunt-necessitatibus-velit-inventore>
+      10. <https://www.kertzmann.com/possimus-ullam-consequatur-itaque-sed-modi-aliquam>
+      11. <https://www.sample.com/?air=color&cave=judge#shake>
+      12. <http://schinner.com/quia-vitae-qui-explicabo-provident-minima-ratione.html>
+      13. <https://runolfsson.com/esse-ab-rerum-et-quis-aut.html>
+      14. <https://www.moen.com/explicabo-exercitationem-culpa-et-eum-temporibus>
+      15. <https://horse.sample.com/shape/company?mom=collar#donkey>
+      16. <http://batz.com/reprehenderit-voluptate-id-soluta-tenetur>
 
 ## QUESTIONS
 
 1. Filtering for Usernames: How many usernames fit the syntax above?
-   1. ``
+   1. `8`
 2. Filtering for Usernames: One username consists of a readable word concatenated with a number. What is it?
-   1. ``
+   1. `User35`
 3. Filtering for Emails: How many emails fit the syntax above?
-   1. ``
+   1. `11`
 4. Filtering for Emails: How many unique domains are there?
-   1. ``
+   1. `8`
 5. Filtering for Emails: What is the domain of the email with the local-part "lewisham44"?
-   1. ``
+   1. `amg.com`
 6. Filtering for Emails: What is the domain of the email with the local-part "maxximax"?
-   1. ``
+   1. `fedfull.com`
 7. Filtering for Emails: What is the local-part of the email with the domain name "hotmail.com"?
-   1. ``
+   1. `hussain.volt`
 8. Filtering for URLs: How many URLs fit the syntax provided?
-   1. ``
+   1. `16`
 9. Filtering for URLs: How many of these URLs start with "https"?
-   1. ``
+   1. `7`
