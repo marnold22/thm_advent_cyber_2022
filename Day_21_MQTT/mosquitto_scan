@@ -1,0 +1,51 @@
+# Nmap 7.93 scan initiated Tue Dec 27 12:47:12 2022 as: nmap -p 1883 -sV -sC -oN mosquitto_scan 10.10.108.88
+Nmap scan report for 10.10.108.88
+Host is up (0.18s latency).
+
+PORT     STATE SERVICE                 VERSION
+1883/tcp open  mosquitto version 1.6.9
+| mqtt-subscribe: 
+|   Topics and their most recent payloads: 
+|     $SYS/broker/load/publish/sent/5min: 5.48
+|     $SYS/broker/load/messages/sent/1min: 9.78
+|     $SYS/broker/load/messages/sent/15min: 5.03
+|     $SYS/broker/load/bytes/received/15min: 112.48
+|     $SYS/broker/publish/messages/sent: 64
+|     $SYS/broker/clients/active: 4
+|     $SYS/broker/load/sockets/15min: 0.37
+|     $SYS/broker/bytes/sent: 2347
+|     $SYS/broker/messages/received: 101
+|     $SYS/broker/publish/messages/received: 58
+|     $SYS/broker/load/sockets/5min: 0.67
+|     $SYS/broker/load/messages/received/15min: 4.92
+|     $SYS/broker/load/publish/sent/15min: 3.11
+|     $SYS/broker/clients/disconnected: 0
+|     $SYS/broker/clients/connected: 4
+|     $SYS/broker/store/messages/bytes: 209
+|     $SYS/broker/load/messages/received/5min: 8.76
+|     $SYS/broker/load/connections/5min: 0.28
+|     $SYS/broker/clients/inactive: 0
+|     $SYS/broker/load/bytes/received/1min: 231.32
+|     $SYS/broker/load/sockets/1min: 1.86
+|     $SYS/broker/load/connections/1min: 0.05
+|     $SYS/broker/heap/current: 54776
+|     $SYS/broker/publish/bytes/sent: 1280
+|     $SYS/broker/version: mosquitto version 1.6.9
+|     $SYS/broker/bytes/received: 2315
+|     $SYS/broker/uptime: 594 seconds
+|     $SYS/broker/publish/bytes/received: 1160
+|     $SYS/broker/messages/sent: 104
+|     $SYS/broker/load/publish/received/1min: 6.36
+|     $SYS/broker/load/messages/received/1min: 10.03
+|     $SYS/broker/load/publish/sent/1min: 6.36
+|     device/init: ZQPVSRFABTEMEEG0YDLR
+|     $SYS/broker/load/bytes/sent/5min: 199.76
+|     $SYS/broker/load/publish/received/15min: 2.86
+|     $SYS/broker/load/bytes/sent/1min: 229.74
+|     $SYS/broker/load/publish/received/5min: 5.18
+|     $SYS/broker/load/bytes/sent/15min: 113.78
+|     $SYS/broker/load/messages/sent/5min: 8.79
+|_    $SYS/broker/load/bytes/received/5min: 199.10
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Dec 27 12:47:26 2022 -- 1 IP address (1 host up) scanned in 14.29 seconds

@@ -1,0 +1,147 @@
+# Nmap 7.93 scan initiated Mon Dec 26 18:03:22 2022 as: nmap -sC -sV -p- -vv --min-rate 1500 -oN secondary 10.10.185.233
+Nmap scan report for 10.10.185.233
+Host is up, received syn-ack (0.18s latency).
+Scanned at 2022-12-26 18:03:23 PST for 145s
+Not shown: 65532 closed tcp ports (conn-refused)
+PORT     STATE SERVICE                 REASON  VERSION
+22/tcp   open  ssh                     syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.1 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 71d16b0d8bd0711750dec81735d94cba (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDoT3Gci1EKOQ16cWeKfF80Rnpvu3gUZDzYHUW6otk+tLG2HCnckAb4sX1aiaU/Fm5U4DfiOP6EaL3AQ8HHl/3fXE32hSSNW5liCQ+U3B5QT1D605121xu2C/z1VK9LzabG93cJ3GsrH1jg1V4Hpypm/fvbfj5ZAdMDdcz0anMVx30iM9kXXvt616aB/MmH/m2f39/fj1j4+rMLS5dkDZ40CaNSOAn3zKYK4U/SGpiJB0L7g63RJnTBWPQrGQXzLd3wD6w2AIat/U/bEf/Dtcf3YDOePX+fHJh70OOVdC+3+dHrZEwYZ/ElZZgRzxGoykb1XU18oqs5YQfFQWuA7w0+6bRaAV9cDVHxOeLfnW3O/ewGxjgB3t4f+BBsl9KOmG0dgXz9HnOKxpMEBGLDYdk5xQhek+U1j2tP5NfMiwFA/+qPRV6yA5ls8j3gEGafQTdJwS0H0jqgePaSbw0bkuCfyADq8MSW6lVmLxULzWrF41did+dGeKQdAaMb5ZseKm0=
+|   256 fca957a74d6d5ba545d51e3dd9365bc2 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOLTDd38dNixYtz7ZUNvjfW/7yUM3h7B1K6usHgxARVLfl8GGHha3lR5GV6+6eBSZ2Hf/RKz/SsTFRKEGBH3oBo=
+|   256 9f0ccc6d649c9a7a86637aabe00a7cf3 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBd/RiPVyoCutPxM81DBPd/CcOA/isLUySx9oUyyH+B1
+80/tcp   open  http                    syn-ack WebSockify Python/3.8.10
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 405 Method Not Allowed
+|     Server: WebSockify Python/3.8.10
+|     Date: Tue, 27 Dec 2022 02:04:14 GMT
+|     Connection: close
+|     Content-Type: text/html;charset=utf-8
+|     Content-Length: 472
+|     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+|     "http://www.w3.org/TR/html4/strict.dtd">
+|     <html>
+|     <head>
+|     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+|     <title>Error response</title>
+|     </head>
+|     <body>
+|     <h1>Error response</h1>
+|     <p>Error code: 405</p>
+|     <p>Message: Method Not Allowed.</p>
+|     <p>Error code explanation: 405 - Specified method is invalid for this resource.</p>
+|     </body>
+|     </html>
+|   HTTPOptions: 
+|     HTTP/1.1 501 Unsupported method ('OPTIONS')
+|     Server: WebSockify Python/3.8.10
+|     Date: Tue, 27 Dec 2022 02:04:14 GMT
+|     Connection: close
+|     Content-Type: text/html;charset=utf-8
+|     Content-Length: 500
+|     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+|     "http://www.w3.org/TR/html4/strict.dtd">
+|     <html>
+|     <head>
+|     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+|     <title>Error response</title>
+|     </head>
+|     <body>
+|     <h1>Error response</h1>
+|     <p>Error code: 501</p>
+|     <p>Message: Unsupported method ('OPTIONS').</p>
+|     <p>Error code explanation: HTTPStatus.NOT_IMPLEMENTED - Server does not support this operation.</p>
+|     </body>
+|_    </html>
+|_http-title: Error response
+|_http-server-header: WebSockify Python/3.8.10
+1883/tcp open  mosquitto version 1.6.9 syn-ack
+| mqtt-subscribe: 
+|   Topics and their most recent payloads: 
+|     $SYS/broker/load/bytes/received/15min: 199.67
+|     $SYS/broker/clients/active: 4
+|     $SYS/broker/publish/messages/sent: 243
+|     $SYS/broker/load/messages/received/15min: 8.42
+|     $SYS/broker/messages/sent: 353
+|     $SYS/broker/clients/connected: 4
+|     $SYS/broker/version: mosquitto version 1.6.9
+|     $SYS/broker/load/messages/sent/5min: 16.52
+|     $SYS/broker/load/sockets/5min: 0.55
+|     $SYS/broker/load/bytes/received/5min: 230.22
+|     $SYS/broker/load/publish/received/1min: 5.81
+|     $SYS/broker/load/sockets/15min: 0.27
+|     $SYS/broker/load/connections/1min: 1.17
+|     $SYS/broker/uptime: 1980 seconds
+|     $SYS/broker/clients/disconnected: 0
+|     $SYS/broker/publish/bytes/received: 3940
+|     $SYS/broker/load/messages/sent/15min: 10.91
+|     device/init: KIVUZC6JM6OB8X6JK7AW
+|     $SYS/broker/subscriptions/count: 4
+|     $SYS/broker/load/bytes/sent/15min: 295.10
+|     $SYS/broker/store/messages/count: 40
+|     $SYS/broker/messages/received: 309
+|     $SYS/broker/retained messages/count: 43
+|     $SYS/broker/heap/current: 56848
+|     $SYS/broker/heap/maximum: 57248
+|     $SYS/broker/publish/messages/received: 197
+|     $SYS/broker/bytes/received: 7353
+|     $SYS/broker/publish/bytes/sent: 4323
+|     $SYS/broker/load/bytes/received/1min: 259.42
+|     $SYS/broker/store/messages/bytes: 191
+|     $SYS/broker/load/publish/received/5min: 5.95
+|     $SYS/broker/clients/inactive: 0
+|     $SYS/broker/bytes/sent: 8942
+|     $SYS/broker/load/sockets/1min: 1.29
+|     $SYS/broker/load/connections/5min: 0.41
+|     $SYS/broker/clients/total: 4
+|     $SYS/broker/load/publish/sent/5min: 12.91
+|     $SYS/broker/load/publish/sent/15min: 7.88
+|     $SYS/broker/load/publish/sent/1min: 37.79
+|     $SYS/broker/load/messages/received/1min: 10.35
+|     $SYS/broker/load/bytes/sent/5min: 497.47
+|     $SYS/broker/load/messages/sent/1min: 42.32
+|     $SYS/broker/messages/stored: 40
+|     $SYS/broker/load/messages/received/5min: 9.66
+|     $SYS/broker/load/bytes/sent/1min: 1508.70
+|_    $SYS/broker/load/connections/15min: 0.21
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.93%I=7%D=12/26%Time=63AA529E%P=x86_64-pc-linux-gnu%r(Get
+SF:Request,291,"HTTP/1\.1\x20405\x20Method\x20Not\x20Allowed\r\nServer:\x2
+SF:0WebSockify\x20Python/3\.8\.10\r\nDate:\x20Tue,\x2027\x20Dec\x202022\x2
+SF:002:04:14\x20GMT\r\nConnection:\x20close\r\nContent-Type:\x20text/html;
+SF:charset=utf-8\r\nContent-Length:\x20472\r\n\r\n<!DOCTYPE\x20HTML\x20PUB
+SF:LIC\x20\"-//W3C//DTD\x20HTML\x204\.01//EN\"\n\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\"http://www\.w3\.org/TR/html4/strict\.dtd\">\n<html>\n\x20\x20\x
+SF:20\x20<head>\n\x20\x20\x20\x20\x20\x20\x20\x20<meta\x20http-equiv=\"Con
+SF:tent-Type\"\x20content=\"text/html;charset=utf-8\">\n\x20\x20\x20\x20\x
+SF:20\x20\x20\x20<title>Error\x20response</title>\n\x20\x20\x20\x20</head>
+SF:\n\x20\x20\x20\x20<body>\n\x20\x20\x20\x20\x20\x20\x20\x20<h1>Error\x20
+SF:response</h1>\n\x20\x20\x20\x20\x20\x20\x20\x20<p>Error\x20code:\x20405
+SF:</p>\n\x20\x20\x20\x20\x20\x20\x20\x20<p>Message:\x20Method\x20Not\x20A
+SF:llowed\.</p>\n\x20\x20\x20\x20\x20\x20\x20\x20<p>Error\x20code\x20expla
+SF:nation:\x20405\x20-\x20Specified\x20method\x20is\x20invalid\x20for\x20t
+SF:his\x20resource\.</p>\n\x20\x20\x20\x20</body>\n</html>\n")%r(HTTPOptio
+SF:ns,2B9,"HTTP/1\.1\x20501\x20Unsupported\x20method\x20\('OPTIONS'\)\r\nS
+SF:erver:\x20WebSockify\x20Python/3\.8\.10\r\nDate:\x20Tue,\x2027\x20Dec\x
+SF:202022\x2002:04:14\x20GMT\r\nConnection:\x20close\r\nContent-Type:\x20t
+SF:ext/html;charset=utf-8\r\nContent-Length:\x20500\r\n\r\n<!DOCTYPE\x20HT
+SF:ML\x20PUBLIC\x20\"-//W3C//DTD\x20HTML\x204\.01//EN\"\n\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\"http://www\.w3\.org/TR/html4/strict\.dtd\">\n<html>\n\
+SF:x20\x20\x20\x20<head>\n\x20\x20\x20\x20\x20\x20\x20\x20<meta\x20http-eq
+SF:uiv=\"Content-Type\"\x20content=\"text/html;charset=utf-8\">\n\x20\x20\
+SF:x20\x20\x20\x20\x20\x20<title>Error\x20response</title>\n\x20\x20\x20\x
+SF:20</head>\n\x20\x20\x20\x20<body>\n\x20\x20\x20\x20\x20\x20\x20\x20<h1>
+SF:Error\x20response</h1>\n\x20\x20\x20\x20\x20\x20\x20\x20<p>Error\x20cod
+SF:e:\x20501</p>\n\x20\x20\x20\x20\x20\x20\x20\x20<p>Message:\x20Unsupport
+SF:ed\x20method\x20\('OPTIONS'\)\.</p>\n\x20\x20\x20\x20\x20\x20\x20\x20<p
+SF:>Error\x20code\x20explanation:\x20HTTPStatus\.NOT_IMPLEMENTED\x20-\x20S
+SF:erver\x20does\x20not\x20support\x20this\x20operation\.</p>\n\x20\x20\x2
+SF:0\x20</body>\n</html>\n");
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Dec 26 18:05:48 2022 -- 1 IP address (1 host up) scanned in 146.08 seconds

